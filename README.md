@@ -1,4 +1,4 @@
-# HHBQP: Hybrid Heuristic Algorithm for Unconstrained Binary Quadratic Programming
+# HHBQP: Hybrid Heuristic for Unconstrained Binary Quadratic Programming
 
 See [SouzaRitt2018] for a complete description of HHBQP.
 
