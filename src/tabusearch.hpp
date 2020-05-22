@@ -1,17 +1,13 @@
 #pragma once
 
-// BTS: Simple tabu search
 struct BTS {
-    // some improvement w/ reservoir sampling
     BTS() {}
     
-    // bi with reservoir sampling
     template<typename Excluder>
     unsigned bi(const Solution &S, Excluder exclude, int bkv) {
         pair<int, unsigned> best = make_pair(numeric_limits<int>::max(), S.x.size()); // delta, index
         unsigned nbest = 0;
         for(unsigned i = 0; i < S.x.size(); i++) {
-            // aspiration
             if(S.flipvalue(i) + S.value < bkv)
                 return i;
             if(exclude(i))
