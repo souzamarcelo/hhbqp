@@ -75,6 +75,11 @@ namespace recombine {
             for(unsigned i = 0; i < b; i++) {
                 Solution S(I);
                 improve(S);
+
+                if(i == 0 || S.value < e[0].value)
+                    report.newBestKnownValue(chrono::system_clock::now(), S.value);
+                
+
                 e.add(S);
                 if(termination(e[0].value, e.back().value, steps, target, start, last_report))
                     goto done;
@@ -103,6 +108,9 @@ namespace recombine {
                         improve(S);
                         S.novel = true;
 
+                        if(S.value < e[0].value)
+                            report.newBestKnownValue(chrono::system_clock::now(), S.value);
+
                         if(e.add(S))
                             num_novel++;
                         
@@ -114,6 +122,9 @@ namespace recombine {
                         recombine(I, S, current[i]);
                         improve(S);
                         S.novel = true;
+
+                        if(S.value < e[0].value)
+                            report.newBestKnownValue(chrono::system_clock::now(), S.value);
 
                         if(e.add(S))
                             num_novel++;

@@ -45,6 +45,8 @@ iterated_localsearch(Solution &S, Improvement improve, Perturbation perturb, chr
     Solution B(S.I);
     B = S;
 
+    report.newBestKnownValue(chrono::system_clock::now(), B.value);
+    
     do {
         // (2) check stopping conditions
         if(S.value <= target)
@@ -61,6 +63,8 @@ iterated_localsearch(Solution &S, Improvement improve, Perturbation perturb, chr
         if(S.value < B.value) {
             B = S;
             B.time = chrono::system_clock::now();
+
+            report.newBestKnownValue(chrono::system_clock::now(), B.value);
         }
     } while (true);
     steps--;

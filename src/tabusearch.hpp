@@ -1,13 +1,17 @@
 #pragma once
 
+// BTS: Simple tabu search
 struct BTS {
+    // some improvement w/ reservoir sampling
     BTS() {}
     
+    // bi with reservoir sampling
     template<typename Excluder>
     unsigned bi(const Solution &S, Excluder exclude, int bkv) {
         pair<int, unsigned> best = make_pair(numeric_limits<int>::max(), S.x.size()); // delta, index
         unsigned nbest = 0;
         for(unsigned i = 0; i < S.x.size(); i++) {
+            // aspiration
             if(S.flipvalue(i) + S.value < bkv)
                 return i;
             if(exclude(i))
@@ -39,6 +43,8 @@ unsigned tabusearch(Solution &S, Improvement improve, Duration dgen, chrono::sys
     Solution B(S.I);
     B = S;
 
+    report.newBestKnownValue(chrono::system_clock::now(), B.value);
+
     vector<unsigned> tabu(S.x.size() + 1, 0);
     
     do {
@@ -67,6 +73,8 @@ unsigned tabusearch(Solution &S, Improvement improve, Duration dgen, chrono::sys
             B = S;
             B.time = chrono::system_clock::now();
             notimproved = 0;
+
+            report.newBestKnownValue(chrono::system_clock::now(), B.value);
         } else
             notimproved++;
     } while (true);

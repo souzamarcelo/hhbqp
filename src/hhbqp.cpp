@@ -22,6 +22,10 @@ chrono::system_clock::time_point startTime;
 #include "instance.hpp"
 #include "instancedata.hpp"
 #include "solution.hpp"
+
+#include "report.hpp"
+Report report;
+
 #include "elite.hpp"
 #include "localsearch.hpp"
 #include "tabusearch.hpp"
@@ -221,5 +225,4 @@ int main(int argc, char *argv[]) {
     pGamma = vm["pGamma"].as<double>();
     
     run(S, I, target, startTime);
-    cout << S.value << endl;
 }

@@ -1,5 +1,6 @@
 #pragma once
 
+// solution, variable indices 0-based
 struct Solution {
     const Instance &I; // corresponding instance
     vector<char> x;    // x-variables
