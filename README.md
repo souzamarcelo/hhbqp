@@ -1,5 +1,5 @@
 # HHBQP
-**Hybrid Heuristics for Unconstrained Binary Quadratic Programming**
+**Hybrid Heuristic for Unconstrained Binary Quadratic Programming**
 
 This heuristic algorithm were automatically generated using the [AutoBQP](https://github.com/souzamarcelo/AutoBQP) solver. The automated algorithm design process and the HHBQP algorithm are detailed in the following article (see AAC_R algorithm).
 
