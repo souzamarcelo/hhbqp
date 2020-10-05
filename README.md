@@ -1,7 +1,7 @@
 # HHBQP
 **Hybrid Heuristic for Unconstrained Binary Quadratic Programming**
 
-This heuristic algorithm were automatically generated using the [AutoBQP](https://github.com/souzamarcelo/AutoBQP) solver. The automated algorithm design process and the HHBQP algorithm are detailed in the following article (see AAC_R algorithm).
+This heuristic algorithm was automatically generated using the [AutoBQP](https://github.com/souzamarcelo/AutoBQP) solver. The automated algorithm design process and the HHBQP algorithm are detailed in the following article (see AAC_R algorithm).
 
 + Marcelo de Souza, Marcus Ritt. **Automatic Grammar-Based Design of Heuristic Algorithms for Unconstrained Binary Quadratic Programming**. Evolutionary Computation in Combinatorial Optimization, Springer, p. 67-84, 2018.
 
