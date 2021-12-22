@@ -41,8 +41,6 @@ int pSv;
 int pSm;
 int pI;
 int pIv;
-int pD1;
-int pD2;
 int pG;
 int pB;
 int pE;
@@ -153,8 +151,6 @@ int main(int argc, char *argv[]) {
             ("pSm", po::value<int>()->default_value(22), "Max. stagnation is n*pSm")
             ("pI", po::value<int>()->default_value(2), "Strategy for max. iterations")
             ("pIv", po::value<int>()->default_value(10000), "Constant for max. iterations")
-            ("pD1", po::value<int>()->default_value(10), "Min. perturbation size")
-            ("pD2", po::value<int>()->default_value(10), "Max. perturbation size is n/pD2")
             ("pG", po::value<int>()->default_value(10), "Perturbation size is n/pG")
             ("pB", po::value<int>()->default_value(8), "Candidate variables for perturbation")
             ("pE", po::value<int>()->default_value(16), "Elite set size for the recombination step")
@@ -217,8 +213,6 @@ int main(int argc, char *argv[]) {
     pSm = vm["pSm"].as<int>();
     pI = vm["pI"].as<int>();
     pIv = vm["pIv"].as<int>();
-    pD1 = vm["pD1"].as<int>();
-    pD2 = vm["pD2"].as<int>();
     pG = vm["pG"].as<int>();
     pB = vm["pB"].as<int>();
     pE = vm["pE"].as<int>();
