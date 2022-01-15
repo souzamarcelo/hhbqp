@@ -8,10 +8,10 @@ This heuristic algorithm was automatically generated using the [AutoBQP](https:/
 **Bibtex**
 
 ```bibtex
-@inproceedings{SouzaEtAl2018autobqp,
+@inproceedings{SouzaAndRitt2018evocop,
   title        = {Automatic Grammar-Based Design of Heuristic Algorithms for Unconstrained Binary Quadratic Programming},
   author       = {Souza, Marcelo and Ritt, Marcus},
-  booktitle    = {Evolutionary Computation in Combinatorial Optimization},
+  booktitle    = {Evolutionary Computation in Combinatorial Optimization ({EvoCOP}~2018)},
   year         = {2018},
   publisher    = {Springer},
   pages        = {67--84}
